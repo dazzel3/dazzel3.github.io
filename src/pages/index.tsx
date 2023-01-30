@@ -1,11 +1,14 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import '../assets/styles/font.css';
+import GlobalStyle from 'components/common/GlobalStyle';
+import Header from 'components/header/Header';
 
 const IndexPage = () => {
   return (
-    <div>
-      <Link to="/info/">To Info</Link>
-    </div>
+    <>
+      <GlobalStyle />
+      <Header />
+    </>
   );
 };
 
