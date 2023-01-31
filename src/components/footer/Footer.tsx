@@ -18,6 +18,10 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 20px;
+
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    height: 9vh;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -27,9 +31,17 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   border-top: 1px solid #f6f6f6;
+
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    width: 90%;
+  }
 `;
 
 const Text = styled.h1`
   color: #464646;
   font-size: 1.5rem;
+
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    font-size: 1.2rem;
+  }
 `;
