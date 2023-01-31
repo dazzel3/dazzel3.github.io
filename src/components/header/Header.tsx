@@ -28,6 +28,10 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   box-shadow: 0px 2px 3px rgba(218, 218, 218, 0.25);
+
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    height: 7vh;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -38,6 +42,10 @@ const Wrapper = styled.div`
   align-items: center;
   padding: 0 1rem;
   box-sizing: border-box;
+
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    width: 90%;
+  }
 `;
 
 const Logo = styled.div`
@@ -53,6 +61,10 @@ const Logo = styled.div`
 
   & *:hover {
     color: #2186fa;
+  }
+
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    font-size: 2rem;
   }
 `;
 

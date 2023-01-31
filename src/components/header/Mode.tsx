@@ -20,9 +20,9 @@ const Button = styled.button`
   padding: 0.5rem;
   box-sizing: border-box;
   border-radius: 50%;
-  transition: 0.4s ease-in-out;
+  transition: 0.4s ease;
 
   &:hover {
-    background: #5fa8fb;
+    background: #2186fa46;
   }
 `;
