@@ -47,8 +47,12 @@ const Logo = styled.div`
   padding: -0.2rem 0.1rem;
   transition: 0.2s ease-in-out;
 
-  &:hover {
-    background: #62aafd;
+  & * {
+    transition: 0.2s ease;
+  }
+
+  & *:hover {
+    color: #2186fa;
   }
 `;
 
@@ -61,10 +65,10 @@ const ButtonContainer = styled.div`
   font-weight: 500;
 
   & * {
-    transition: 0.2s ease-in-out;
+    transition: 0.2s ease;
   }
 
   & *:hover {
-    color: #3493ff;
+    color: #2186fa;
   }
 `;
