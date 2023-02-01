@@ -5,7 +5,7 @@ import styled from '@emotion/styled';
 interface LinkButtonProps {
   to: string;
   active?: boolean;
-  children: ReactNode;
+  children?: ReactNode;
 }
 
 const LinkButton = ({ to, active, children }: LinkButtonProps) => {
