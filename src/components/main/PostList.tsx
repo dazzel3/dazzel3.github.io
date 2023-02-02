@@ -2,24 +2,31 @@ import React from 'react';
 import styled from '@emotion/styled';
 import PostItem from './PostItem';
 
-const POST_ITEM_DATA = {
-  title: 'Post Item Title',
-  date: '2020.01.29.',
-  categories: ['Web', 'Frontend', 'Testing'],
-  summary:
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident repellat doloremque fugit quis rem temporibus! Maxime molestias, suntrem debitis odit harum impedit. Modi cupiditate harum dignissimos eos in corrupti!',
-  thumbnail:
-    'https://code.visualstudio.com/assets/docs/languages/javascript/overview.png',
-  link: 'https://www.google.co.kr/',
-};
+export interface PostProps {
+  node: {
+    id: string;
+    frontmatter: {
+      title: string;
+      summary: string;
+      date: string;
+      categories: string[];
+      thumbnail: {
+        publicURL: string;
+      };
+    };
+  };
+}
 
-const PostList = () => {
+interface PostListProps {
+  posts: PostProps[];
+}
+
+const PostList = ({ posts }: PostListProps) => {
   return (
     <PostListWrapper>
-      <PostItem {...POST_ITEM_DATA} />
-      <PostItem {...POST_ITEM_DATA} />
-      <PostItem {...POST_ITEM_DATA} />
-      <PostItem {...POST_ITEM_DATA} />
+      {posts.map(({ node: { id, frontmatter } }: PostProps) => (
+        <PostItem {...frontmatter} link="https://www.google.co.kr/" key={id} />
+      ))}
     </PostListWrapper>
   );
 };
