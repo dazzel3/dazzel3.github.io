@@ -2,9 +2,10 @@ import React from 'react';
 import GlobalStyle from 'components/common/GlobalStyle';
 import Header from 'components/header/Header';
 import CategoryList from 'components/main/CategoryList';
-import PostList, { PostProps } from 'components/main/PostList';
+import PostList from 'components/main/PostList';
 import Footer from 'components/footer/Footer';
 import { graphql } from 'gatsby';
+import { PostListItemType } from 'types/postItem';
 
 const CATEGORY_LIST = {
   All: 5,
@@ -15,7 +16,7 @@ const CATEGORY_LIST = {
 interface IndexPageProps {
   data: {
     allMarkdownRemark: {
-      edges: PostProps[];
+      edges: PostListItemType[];
     };
   };
 }

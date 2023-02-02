@@ -1,15 +1,9 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import LinkButton from 'components/common/LinkButton';
+import { PostFrontmatterType } from 'types/postItem';
 
-interface PostItemProps {
-  title: string;
-  date: string;
-  categories: string[];
-  summary: string;
-  thumbnail: {
-    publicURL: string;
-  };
+interface PostItemProps extends PostFrontmatterType {
   link: string;
 }
 

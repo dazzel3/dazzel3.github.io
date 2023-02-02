@@ -1,30 +1,16 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import PostItem from './PostItem';
-
-export interface PostProps {
-  node: {
-    id: string;
-    frontmatter: {
-      title: string;
-      summary: string;
-      date: string;
-      categories: string[];
-      thumbnail: {
-        publicURL: string;
-      };
-    };
-  };
-}
+import { PostListItemType } from 'types/postItem';
 
 interface PostListProps {
-  posts: PostProps[];
+  posts: PostListItemType[];
 }
 
 const PostList = ({ posts }: PostListProps) => {
   return (
     <PostListWrapper>
-      {posts.map(({ node: { id, frontmatter } }: PostProps) => (
+      {posts.map(({ node: { id, frontmatter } }: PostListItemType) => (
         <PostItem {...frontmatter} link="https://www.google.co.kr/" key={id} />
       ))}
     </PostListWrapper>
