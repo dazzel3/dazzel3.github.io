@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import GlobalStyle from 'components/common/GlobalStyle';
 import Header from 'components/header/Header';
 import CategoryList from 'components/main/CategoryList';
@@ -7,12 +7,7 @@ import Footer from 'components/footer/Footer';
 import { graphql } from 'gatsby';
 import { PostListItemType } from 'types/postItem';
 import queryString, { ParsedQuery } from 'query-string';
-
-const CATEGORY_LIST = {
-  All: 5,
-  Web: 3,
-  Mobile: 2,
-};
+import { CategoryListProps } from '../components/main/CategoryList';
 
 interface IndexPageProps {
   location: {
@@ -37,15 +32,40 @@ const IndexPage = ({
       ? 'All'
       : parsed.category;
 
+  const categoryList = useMemo(
+    () =>
+      edges.reduce(
+        (
+          list: CategoryListProps['categoryList'],
+          {
+            node: {
+              frontmatter: { categories },
+            },
+          }: PostListItemType,
+        ) => {
+          categories.forEach(category => {
+            list[category] =
+              list[category] === undefined ? 1 : list[category] + 1;
+          });
+
+          list['All'] += 1;
+
+          return list;
+        },
+        { All: 0 },
+      ),
+    [],
+  );
+
   return (
     <>
       <GlobalStyle />
       <Header />
       <CategoryList
         selectedCategory={selectedCategory}
-        categoryList={CATEGORY_LIST}
+        categoryList={categoryList}
       />
-      <PostList posts={edges} />
+      <PostList selectedCategory={selectedCategory} posts={edges} />
       <Footer />
     </>
   );

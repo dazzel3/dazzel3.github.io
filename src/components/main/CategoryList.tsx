@@ -2,12 +2,12 @@ import styled from '@emotion/styled';
 import React from 'react';
 import LinkButton from 'components/common/LinkButton';
 
-type CategoryListProps = {
+export interface CategoryListProps {
   selectedCategory: string;
   categoryList: {
     [key: string]: number;
   };
-};
+}
 
 const CategoryList = ({
   selectedCategory,
