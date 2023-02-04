@@ -1,14 +1,15 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Template from 'components/common/Template';
-import { PostListItemType } from 'types/postItem';
+import { PostContentType } from 'types/postItem';
 import PostHead from 'components/post/PostHead';
 import styled from '@emotion/styled';
+import PostContent from 'components/post/PostContent';
 
 interface PostTemplateProps {
   data: {
     allMarkdownRemark: {
-      edges: PostListItemType[];
+      edges: PostContentType[];
     };
   };
 }
@@ -20,6 +21,7 @@ const PostTemplate = ({
 }: PostTemplateProps) => {
   const {
     node: {
+      html,
       frontmatter: { title, date, categories },
     },
   } = edges[0];
@@ -28,6 +30,7 @@ const PostTemplate = ({
     <Template>
       <Container>
         <PostHead title={title} date={date} categories={categories} />
+        <PostContent html={html} />
       </Container>
     </Template>
   );

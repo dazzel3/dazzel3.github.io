@@ -21,3 +21,10 @@ export interface PostListItemType {
     frontmatter: PostFrontmatterType;
   };
 }
+
+export interface PostContentType {
+  node: {
+    html: string;
+    frontmatter: PostFrontmatterType;
+  };
+}

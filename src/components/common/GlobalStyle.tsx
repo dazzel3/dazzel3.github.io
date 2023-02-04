@@ -39,7 +39,6 @@ const defaultStyle = css`
   code,
   del,
   dfn,
-  em,
   img,
   ins,
   kbd,
