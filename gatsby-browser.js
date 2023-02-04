@@ -6,4 +6,4 @@
 
 // You can delete this file if you're not using it
 import './src/assets/styles/font.css';
-import 'prismjs/themes/prism-tomorrow.css';
+import 'prismjs/themes/prism-solarizedlight.css';
