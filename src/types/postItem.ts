@@ -1,6 +1,6 @@
 import { IGatsbyImageData } from 'gatsby-plugin-image';
 
-export type PostFrontmatterType = {
+export interface PostFrontmatterType {
   title: string;
   summary: string;
   date: string;
@@ -10,9 +10,9 @@ export type PostFrontmatterType = {
       gatsbyImageData: IGatsbyImageData;
     };
   };
-};
+}
 
-export type PostListItemType = {
+export interface PostListItemType {
   node: {
     id: string;
     fields: {
@@ -20,4 +20,4 @@ export type PostListItemType = {
     };
     frontmatter: PostFrontmatterType;
   };
-};
+}
