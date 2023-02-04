@@ -1,4 +1,4 @@
-import { MutableRefObject, useState, useMemo, useRef } from 'react';
+import { MutableRefObject, useState, useMemo, useRef, useEffect } from 'react';
 import { PostListItemType } from 'types/postItem';
 
 export interface useInfinitieScrollType {
@@ -31,6 +31,31 @@ const useInfiniteScroll = (
       ),
     [selectedCategory],
   );
+
+  const observer: IntersectionObserver = new IntersectionObserver(
+    (entries, observer) => {
+      if (!entries[0].isIntersecting) return;
+
+      setCount(value => value + 1);
+      observer.disconnect();
+    },
+  );
+
+  useEffect(() => {
+    setCount(1);
+  }, [selectedCategory]);
+
+  useEffect(() => {
+    if (
+      NUMBER_OF_ITEMS_PER_PAGE * count >= postListByCategory.length ||
+      containerRef.current === null ||
+      containerRef.current.children.length === 0
+    )
+      return;
+
+    const childNodes = containerRef.current.children;
+    observer.observe(childNodes[childNodes.length - 1]);
+  }, [count, selectedCategory]);
 
   return {
     containerRef,
