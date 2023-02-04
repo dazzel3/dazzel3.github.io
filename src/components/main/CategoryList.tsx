@@ -17,7 +17,7 @@ const CategoryList = ({
     <Container>
       {Object.entries(categoryList).map(([name, count]) => (
         <LinkButton
-          to={`/?category=${name}`}
+          to={`/?category=${encodeURI(name)}`}
           active={name === selectedCategory}
           key={name}
         >
