@@ -39,6 +39,13 @@
 }
 
 @font-face {
+  font-family: 'NotoSansMono';
+  src: url(../fonts/NotoSansMono-Regular.ttf) format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'MonoplexKR-Italic';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_Monoplex-kr@1.0/MonoplexKR-Italic.woff2')
     format('woff2');
