@@ -31,12 +31,12 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   gap: 3rem;
-  padding: 5rem 0;
+  padding: 5.5rem 0;
 `;
 
 const Title = styled.h1`
   font-weight: 700;
-  font-size: 3.3rem;
+  font-size: 3.7rem;
   line-height: 4.5rem;
   word-break: keep-all;
 `;
