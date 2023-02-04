@@ -6,6 +6,7 @@ import { graphql } from 'gatsby';
 import { PostListItemType } from 'types/postItem';
 import queryString, { ParsedQuery } from 'query-string';
 import { CategoryListProps } from '../components/main/CategoryList';
+import styled from '@emotion/styled';
 
 interface IndexPageProps {
   location: {
@@ -57,16 +58,23 @@ const IndexPage = ({
 
   return (
     <Template>
-      <CategoryList
-        selectedCategory={selectedCategory}
-        categoryList={categoryList}
-      />
-      <PostList selectedCategory={selectedCategory} posts={edges} />
+      <Container>
+        <CategoryList
+          selectedCategory={selectedCategory}
+          categoryList={categoryList}
+        />
+        <PostList selectedCategory={selectedCategory} posts={edges} />
+      </Container>
     </Template>
   );
 };
 
 export default IndexPage;
+
+const Container = styled.div`
+  width: 54%;
+  padding-top: 3rem;
+`;
 
 export const getPostList = graphql`
   query getPostList {

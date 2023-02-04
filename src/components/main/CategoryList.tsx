@@ -35,4 +35,5 @@ const Container = styled.div`
   justify-content: center;
   gap: 1.5rem;
   font-size: 1.5rem;
+  margin-top: 1.5rem;
 `;
