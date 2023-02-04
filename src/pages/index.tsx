@@ -1,9 +1,7 @@
 import React, { useMemo } from 'react';
-import GlobalStyle from 'components/common/GlobalStyle';
-import Header from 'components/header/Header';
+import Template from 'components/common/Template';
 import CategoryList from 'components/main/CategoryList';
 import PostList from 'components/main/PostList';
-import Footer from 'components/footer/Footer';
 import { graphql } from 'gatsby';
 import { PostListItemType } from 'types/postItem';
 import queryString, { ParsedQuery } from 'query-string';
@@ -58,16 +56,13 @@ const IndexPage = ({
   );
 
   return (
-    <>
-      <GlobalStyle />
-      <Header />
+    <Template>
       <CategoryList
         selectedCategory={selectedCategory}
         categoryList={categoryList}
       />
       <PostList selectedCategory={selectedCategory} posts={edges} />
-      <Footer />
-    </>
+    </Template>
   );
 };
 

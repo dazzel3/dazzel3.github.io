@@ -1,12 +1,13 @@
-import { graphql } from 'gatsby';
 import React from 'react';
+import { graphql } from 'gatsby';
+import Template from 'components/common/Template';
 
 interface PostTemplateProps {}
 
 const PostTemplate = props => {
   console.log(props);
 
-  return <div>Post Template</div>;
+  return <Template>Post Template</Template>;
 };
 
 export default PostTemplate;
