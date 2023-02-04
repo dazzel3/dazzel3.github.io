@@ -1,16 +1,48 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Template from 'components/common/Template';
+import { PostListItemType } from 'types/postItem';
+import PostHead from 'components/post/PostHead';
+import styled from '@emotion/styled';
 
-interface PostTemplateProps {}
+interface PostTemplateProps {
+  data: {
+    allMarkdownRemark: {
+      edges: PostListItemType[];
+    };
+  };
+}
 
-const PostTemplate = props => {
-  console.log(props);
+const PostTemplate = ({
+  data: {
+    allMarkdownRemark: { edges },
+  },
+}: PostTemplateProps) => {
+  const {
+    node: {
+      frontmatter: { title, date, categories },
+    },
+  } = edges[0];
 
-  return <Template>Post Template</Template>;
+  return (
+    <Template>
+      <Container>
+        <PostHead title={title} date={date} categories={categories} />
+      </Container>
+    </Template>
+  );
 };
 
 export default PostTemplate;
+
+const Container = styled.div`
+  width: 54%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
 
 export const queryMarkdownDataBySlug = graphql`
   query queryMarkdownDataBySlug($slug: String) {
