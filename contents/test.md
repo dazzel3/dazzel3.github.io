@@ -1,6 +1,6 @@
 ---
 date: '2023-01-22'
-title: '프론트엔드 팀프로젝트 회고'
+title: '프론트엔드 팀프로젝트 회고 2023.1.4 - 1.20까지 약 3주간 진행된 팀프로젝트 with 유리팀'
 categories: ['회고', 'SEO', 'Optimization']
 summary: '🧑🏻‍💻 2023.1.4 - 1.20까지 약 3주간 진행된 팀프로젝트 with 유리팀'
 thumbnail: './logo-full.png'
