@@ -25,6 +25,7 @@ export default Header;
 
 const Container = styled.div`
   height: 10vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   box-shadow: 0px 2px 3px rgba(218, 218, 218, 0.25);
@@ -35,7 +36,7 @@ const Container = styled.div`
 `;
 
 const Wrapper = styled.div`
-  width: 60%;
+  width: 54%;
   height: 100%;
   display: flex;
   justify-content: space-between;
