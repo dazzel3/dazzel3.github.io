@@ -42,6 +42,8 @@ const Template = ({
         <meta name="twitter:image" content={image} />
         <meta name="twitter:site" content="@dayeon" />
         <meta name="twitter:creator" content="@dayeon" />
+
+        <html lang="ko" />
       </Helmet>
       <GlobalStyle />
       <Header />
