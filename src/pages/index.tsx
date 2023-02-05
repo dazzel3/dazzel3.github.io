@@ -13,6 +13,13 @@ interface IndexPageProps {
     search: string;
   };
   data: {
+    site: {
+      siteMetadata: {
+        title: string;
+        description: string;
+        siteUrl: string;
+      };
+    };
     allMarkdownRemark: {
       edges: PostListItemType[];
     };
@@ -22,6 +29,9 @@ interface IndexPageProps {
 const IndexPage = ({
   location: { search },
   data: {
+    site: {
+      siteMetadata: { title, description, siteUrl },
+    },
     allMarkdownRemark: { edges },
   },
 }: IndexPageProps) => {
@@ -57,7 +67,7 @@ const IndexPage = ({
   );
 
   return (
-    <Template>
+    <Template title={title} description={description} url={siteUrl}>
       <Container>
         <CategoryList
           selectedCategory={selectedCategory}
@@ -78,6 +88,13 @@ const Container = styled.div`
 
 export const getPostList = graphql`
   query getPostList {
+    site {
+      siteMetadata {
+        title
+        description
+        siteUrl
+      }
+    }
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date, frontmatter___title] }
     ) {
