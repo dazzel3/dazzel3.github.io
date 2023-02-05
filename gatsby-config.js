@@ -49,6 +49,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-emotion`,
+    'gatsby-plugin-sitemap',
     {
       resolve: `gatsby-transformer-remark`,
       options: {
