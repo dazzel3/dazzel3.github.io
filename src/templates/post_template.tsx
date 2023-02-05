@@ -5,6 +5,7 @@ import { PostContentType } from 'types/postItem';
 import PostHead from 'components/post/PostHead';
 import styled from '@emotion/styled';
 import PostContent from 'components/post/PostContent';
+import CommentWidget from 'components/post/CommentWidget';
 
 interface PostTemplateProps {
   data: {
@@ -27,12 +28,15 @@ const PostTemplate = ({
   } = edges[0];
 
   return (
-    <Template>
-      <Container>
-        <PostHead title={title} date={date} categories={categories} />
-        <PostContent html={html} />
-      </Container>
-    </Template>
+    <>
+      <Template>
+        <Container>
+          <PostHead title={title} date={date} categories={categories} />
+          <PostContent html={html} />
+        </Container>
+      </Template>
+      <CommentWidget />
+    </>
   );
 };
 
