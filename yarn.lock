@@ -5470,6 +5470,13 @@ gatsby-parcel-config@^1.5.0:
     "@parcel/transformer-js" "2.8.2"
     "@parcel/transformer-json" "2.8.2"
 
+gatsby-plugin-canonical-urls@^5.5.0:
+  version "5.5.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-canonical-urls/-/gatsby-plugin-canonical-urls-5.5.0.tgz#b77f3c2eb9cff2f82ad1f4cfbd1014a3c6de1791"
+  integrity sha512-ELZYSWWZOIAhGH6Xz/v4hVJQIwxy4xHsUxFeiBi4dzqP2V60UN/ce5CKX/AdjB8DNPJjKrk5LdzvMy3rJApLIA==
+  dependencies:
+    "@babel/runtime" "^7.20.7"
+
 gatsby-plugin-emotion@^8.5.0:
   version "8.5.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-emotion/-/gatsby-plugin-emotion-8.5.0.tgz#0ce32bf071a6095c31529581dfafc48df8bc62ab"

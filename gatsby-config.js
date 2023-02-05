@@ -41,6 +41,13 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: 'gatsby-plugin-canonical-urls',
+      options: {
+        siteUrl: 'https://my-website.com/', // 배포 후 변경 예정
+        stripQueryString: true,
+      },
+    },
     `gatsby-plugin-emotion`,
     {
       resolve: `gatsby-transformer-remark`,
