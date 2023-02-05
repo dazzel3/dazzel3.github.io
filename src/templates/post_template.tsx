@@ -6,12 +6,14 @@ import PostHead from 'components/post/PostHead';
 import styled from '@emotion/styled';
 import PostContent from 'components/post/PostContent';
 import CommentWidget from 'components/post/CommentWidget';
-
 interface PostTemplateProps {
   data: {
     allMarkdownRemark: {
       edges: PostContentType[];
     };
+  };
+  location: {
+    href: string;
   };
 }
 
@@ -19,24 +21,29 @@ const PostTemplate = ({
   data: {
     allMarkdownRemark: { edges },
   },
+  location: { href },
 }: PostTemplateProps) => {
   const {
     node: {
       html,
-      frontmatter: { title, date, categories },
+      frontmatter: {
+        title,
+        summary,
+        date,
+        categories,
+        thumbnail: { publicURL },
+      },
     },
   } = edges[0];
 
   return (
-    <>
-      <Template>
-        <Container>
-          <PostHead title={title} date={date} categories={categories} />
-          <PostContent html={html} />
-        </Container>
-      </Template>
-      <CommentWidget />
-    </>
+    <Template title={title} description={summary} url={href} image={publicURL}>
+      <Container>
+        <PostHead title={title} date={date} categories={categories} />
+        <PostContent html={html} />
+        <CommentWidget />
+      </Container>
+    </Template>
   );
 };
 
@@ -60,12 +67,13 @@ export const queryMarkdownDataBySlug = graphql`
           frontmatter {
             title
             summary
-            date(formatString: "YYYY.MM.DD.")
+            date(formatString: "YYYY.MM.DD")
             categories
             thumbnail {
               childImageSharp {
                 gatsbyImageData
               }
+              publicURL
             }
           }
         }
