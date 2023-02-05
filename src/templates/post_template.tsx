@@ -37,13 +37,20 @@ const PostTemplate = ({
   } = edges[0];
 
   return (
-    <Template title={title} description={summary} url={href} image={publicURL}>
-      <Container>
-        <PostHead title={title} date={date} categories={categories} />
-        <PostContent html={html} />
-        <CommentWidget />
-      </Container>
-    </Template>
+    <>
+      <Template
+        title={title}
+        description={summary}
+        url={href}
+        image={publicURL}
+      >
+        <Container>
+          <PostHead title={title} date={date} categories={categories} />
+          <PostContent html={html} />
+          <CommentWidget />
+        </Container>
+      </Template>
+    </>
   );
 };
 

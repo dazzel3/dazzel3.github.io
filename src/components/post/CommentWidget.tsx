@@ -1,4 +1,5 @@
-import React, { createRef, useEffect } from 'react';
+import styled from '@emotion/styled';
+import React, { useRef, useEffect } from 'react';
 
 const src = 'https://utteranc.es/client.js';
 const repo = 'dazzel3/dazzel3.github.io';
@@ -14,7 +15,7 @@ interface UtterancesAttributesType {
 }
 
 const CommentWidget = () => {
-  const element = createRef<HTMLDivElement>();
+  const element = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (element.current === null) return;
@@ -38,7 +39,12 @@ const CommentWidget = () => {
     element.current.appendChild(utterances);
   }, []);
 
-  return <div ref={element} />;
+  return <Comment ref={element} />;
 };
+
+const Comment = styled.div`
+  width: 100%;
+  margin: 3rem 0;
+`;
 
 export default CommentWidget;
