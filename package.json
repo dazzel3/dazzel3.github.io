@@ -7,6 +7,7 @@
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
+    "@types/react-helmet": "^6.1.6",
     "gatsby": "^5.5.0",
     "gatsby-plugin-emotion": "^8.5.0",
     "gatsby-plugin-image": "^3.5.0",
@@ -23,7 +24,8 @@
     "prismjs": "^1.29.0",
     "query-string": "^8.1.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.49.0",
