@@ -32,6 +32,12 @@ const Container = styled.div`
   align-items: center;
   gap: 3rem;
   padding: 5.5rem 0;
+
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    width: 92%;
+    gap: 2.5rem;
+    padding: 4.5rem 0;
+  }
 `;
 
 const Title = styled.h1`
@@ -39,6 +45,11 @@ const Title = styled.h1`
   font-size: 3.7rem;
   line-height: 4.5rem;
   word-break: keep-all;
+
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    font-size: 3.4rem;
+    text-align: center;
+  }
 `;
 
 const Date = styled.h3`

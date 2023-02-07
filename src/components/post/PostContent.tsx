@@ -39,6 +39,10 @@ const MarkdownRenderer = styled.div`
   * + h2,
   * + h3 {
     margin-top: 3rem;
+
+    @media screen and (max-width: 767px) and (orientation: portrait) {
+      margin-top: 1rem;
+    }
   }
 
   h1 {
@@ -139,6 +143,10 @@ const MarkdownRenderer = styled.div`
     margin: 3.7rem 0;
     padding: 4rem;
     background-color: #aaaaaa1e;
+
+    @media screen and (max-width: 767px) and (orientation: portrait) {
+      padding: 3rem;
+    }
 
     code[class*='language-'] {
       color: #3d3d3d;

@@ -63,6 +63,10 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    width: 90%;
+  }
 `;
 
 export const queryMarkdownDataBySlug = graphql`
