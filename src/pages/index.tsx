@@ -83,7 +83,13 @@ export default IndexPage;
 
 const Container = styled.div`
   width: 54%;
+  margin: 0 auto;
   padding-top: 3rem;
+
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    width: 95%;
+    padding-top: 0.5rem;
+  }
 `;
 
 export const getPostList = graphql`

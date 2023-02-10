@@ -48,6 +48,15 @@ const Wrapper = styled.div`
   gap: 1.7rem;
   font-size: 1.6rem;
   padding: 2rem 1rem;
+  white-space: nowrap;
+
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    width: 90%;
+    justify-content: left;
+    overflow-x: auto;
+    gap: 1.5rem;
+    font-size: 1.5rem;
+  }
 `;
 
 const CategoryItem = styled.div`
