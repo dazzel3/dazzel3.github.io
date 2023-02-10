@@ -42,18 +42,17 @@ const Container = styled.div`
 `;
 
 const Wrapper = styled.div`
-  width: 80%;
+  width: fit-content;
   display: flex;
-  justify-content: center;
-  gap: 1.7rem;
+  align-items: center;
+  gap: 1.5rem;
   font-size: 1.6rem;
+  margin: 2rem 1rem;
   padding: 2rem 1rem;
   white-space: nowrap;
+  overflow-x: auto;
 
   @media screen and (max-width: 767px) and (orientation: portrait) {
-    width: 90%;
-    justify-content: left;
-    overflow-x: auto;
     gap: 1.5rem;
     font-size: 1.5rem;
   }
