@@ -22,8 +22,9 @@ export default LinkButton;
 const LinkContainer = styled(({ active, hover, ...props }: LinkButtonProps) => (
   <Link {...props} />
 ))`
-  font-weight: ${({ active }) => (active ? '700' : '500')};
+  font-weight: ${({ active }) => (active ? '600' : '400')};
   transition: 0.4s ease;
+  color: ${({ active }) => (active ? '#2186fa' : 'inherit')};
 
   &:hover {
     color: ${({ hover }) => (hover ? '#2186fa' : 'inherit')};

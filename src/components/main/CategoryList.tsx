@@ -15,15 +15,19 @@ const CategoryList = ({
 }: CategoryListProps) => {
   return (
     <Container>
-      {Object.entries(categoryList).map(([name, count]) => (
-        <LinkButton
-          to={`/?category=${encodeURI(name)}`}
-          active={name === selectedCategory}
-          key={name}
-        >
-          {name} ({count})
-        </LinkButton>
-      ))}
+      <Wrapper>
+        {Object.entries(categoryList).map(([name, count]) => (
+          <CategoryItem>
+            <LinkButton
+              to={`/?category=${encodeURI(name)}`}
+              active={name === selectedCategory}
+              key={name}
+            >
+              {name}
+            </LinkButton>
+          </CategoryItem>
+        ))}
+      </Wrapper>
     </Container>
   );
 };
@@ -31,9 +35,21 @@ const CategoryList = ({
 export default CategoryList;
 
 const Container = styled.div`
+  width: 100%;
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
-  font-size: 1.5rem;
-  margin-top: 1.5rem;
+  margin: 1.5rem 0;
+`;
+
+const Wrapper = styled.div`
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  gap: 1.7rem;
+  font-size: 1.6rem;
+  padding: 2rem 1rem;
+`;
+
+const CategoryItem = styled.div`
+  color: #80bbff;
 `;
