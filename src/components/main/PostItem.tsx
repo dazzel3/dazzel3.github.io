@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import LinkButton from 'components/common/LinkButton';
 import { PostFrontmatterType } from 'types/postItem';
+import { Link } from 'gatsby';
 
 interface PostItemProps extends PostFrontmatterType {
   link: string;
@@ -15,39 +15,53 @@ const PostItem = ({
   link,
 }: PostItemProps) => {
   return (
-    <LinkButton to={link}>
-      <PostItemContent>
-        <Title>{title}</Title>
-        <Summary>{summary}</Summary>
-        <Date>{date}</Date>
-        <Category>
-          {categories.map(category => (
-            <CategoryItem key={category}>{category}</CategoryItem>
-          ))}
-        </Category>
-      </PostItemContent>
-    </LinkButton>
+    <PostItemContent to={link}>
+      <Title>{title}</Title>
+      <Summary>{summary}</Summary>
+      <Date>{date}</Date>
+      <Category>
+        {categories.map(category => (
+          <CategoryItem key={category}>{category}</CategoryItem>
+        ))}
+      </Category>
+    </PostItemContent>
   );
 };
 
 export default PostItem;
 
-const PostItemContent = styled.div`
+const PostItemContent = styled(Link)`
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   padding: 2.6rem 3rem;
   border-radius: 1.5rem;
-  transition: 0.3s ease-out;
   margin: 0.5rem 0;
+  transition: 0.3s ease-in-out;
 
   &:hover {
-    box-shadow: 0px 0px 20px rgba(33, 134, 250, 0.06);
+    box-shadow: 0px 0px 20px rgba(33, 134, 250, 0.08);
+
+    & > h1 {
+      color: #2186fa;
+      transition: inherit;
+    }
+  }
+
+  &:active {
+    transition: linear;
+    box-shadow: 0 0 1.2px rgba(33, 134, 250, 0.7);
+  }
+
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    &:hover {
+      box-shadow: none;
+    }
   }
 `;
 
-const Title = styled.div`
+const Title = styled.h1`
   display: -webkit-box;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -55,9 +69,10 @@ const Title = styled.div`
   overflow-wrap: break-word;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  font-size: 2.3rem;
+  font-size: 2.5rem;
   font-weight: 700;
-  margin-top: 0.1rem;
+  line-height: 3.4rem;
+  margin-top: 0.2rem;
 `;
 
 const Summary = styled.div`
