@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import COLOR from 'utils/color';
+import { LIGHT_COLOR } from 'utils/color';
 
 interface PostContentProps {
   html: string;
@@ -62,8 +62,8 @@ const MarkdownRenderer = styled.div`
   blockquote {
     margin: 3rem 0;
     padding: 0.7rem 2.2rem;
-    border-left: 5px solid ${COLOR.main};
-    background-color: ${COLOR.lightBlue};
+    border-left: 5px solid ${LIGHT_COLOR.main};
+    background-color: ${LIGHT_COLOR.lightBlue};
   }
 
   // Adjust List Element Style
@@ -93,14 +93,14 @@ const MarkdownRenderer = styled.div`
 
   // Adjust Horizontal Rule style
   hr {
-    border: 0.4px solid ${COLOR.opacityBlue};
+    border: 0.4px solid ${LIGHT_COLOR.opacityBlue};
     margin: 4rem 0;
   }
 
   // Adjust Link Element Style
   a {
-    color: ${COLOR.main};
-    border-bottom: 0.5px solid ${COLOR.main};
+    color: ${LIGHT_COLOR.main};
+    border-bottom: 0.5px solid ${LIGHT_COLOR.main};
 
     &:hover {
       border-bottom-width: 1px;
@@ -117,7 +117,7 @@ const MarkdownRenderer = styled.div`
   }
 
   aside {
-    border: 1.3px solid ${COLOR.opacityGray};
+    border: 1.3px solid ${LIGHT_COLOR.opacityGray};
     border-radius: 0.4rem;
     padding: 1.5rem 2rem;
     margin-top: 1rem;
@@ -133,9 +133,9 @@ const MarkdownRenderer = styled.div`
   code[class*='language-'] {
     padding: 0.2rem 0.6rem;
     margin: 0 0.2rem;
-    color: ${COLOR.main};
+    color: ${LIGHT_COLOR.main};
     font-size: 1.5rem;
-    background-color: ${COLOR.codeBg};
+    background-color: ${LIGHT_COLOR.codeBg};
     border-radius: 0.4rem;
     word-break: keep-all;
   }
@@ -143,14 +143,14 @@ const MarkdownRenderer = styled.div`
   pre[class*='language-'] {
     margin: 3.7rem 0;
     padding: 4rem;
-    background-color: ${COLOR.codeBg};
+    background-color: ${LIGHT_COLOR.codeBg};
 
     @media screen and (max-width: 767px) and (orientation: portrait) {
       padding: 3rem;
     }
 
     code[class*='language-'] {
-      color: ${COLOR.deepGray};
+      color: ${LIGHT_COLOR.deepGray};
       background-color: transparent;
     }
 

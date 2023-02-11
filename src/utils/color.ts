@@ -1,4 +1,4 @@
-export const COLOR = {
+export const LIGHT_COLOR = {
   defaultBg: '#fdfdfd',
   codeBg: '#aaaaaa1e',
   main: '#2186fa',
@@ -11,4 +11,4 @@ export const COLOR = {
   opacityGray: '#aaaaaa6f',
 } as const;
 
-export default COLOR;
+export const DARK_COLOR = {};

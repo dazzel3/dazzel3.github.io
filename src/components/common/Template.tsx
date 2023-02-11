@@ -43,6 +43,8 @@ const Template = ({
         <meta name="twitter:site" content="@dayeon" />
         <meta name="twitter:creator" content="@dayeon" />
 
+        <meta name="color-scheme" content="dark light"></meta>
+
         <html lang="ko" />
       </Helmet>
       <GlobalStyle />

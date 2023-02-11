@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { PostFrontmatterType } from 'types/postItem';
 import { Link } from 'gatsby';
-import COLOR from 'utils/color';
+import { LIGHT_COLOR } from 'utils/color';
 
 interface PostItemProps extends PostFrontmatterType {
   link: string;
@@ -45,7 +45,7 @@ const PostItemContent = styled(Link)`
     box-shadow: 0px 0px 20px rgba(33, 134, 250, 0.08);
 
     & > h1 {
-      color: ${COLOR.main};
+      color: ${LIGHT_COLOR.main};
       transition: inherit;
     }
   }
@@ -55,7 +55,7 @@ const PostItemContent = styled(Link)`
     box-shadow: 0 0 1.2px rgba(33, 134, 250, 0.7);
 
     & > h1 {
-      color: ${COLOR.deepBlue};
+      color: ${LIGHT_COLOR.deepBlue};
       transition: inherit;
     }
   }
@@ -98,7 +98,7 @@ const Summary = styled.div`
 const Date = styled.div`
   font-size: 1.5rem;
   font-weight: 400;
-  color: ${COLOR.gray};
+  color: ${LIGHT_COLOR.gray};
 `;
 
 const Category = styled.div`
@@ -111,8 +111,8 @@ const CategoryItem = styled.div`
   padding: 0.8rem 1.4rem;
   font-weight: 500;
   font-size: 1.3rem;
-  background-color: ${COLOR.opacityBlue};
-  color: ${COLOR.main};
+  background-color: ${LIGHT_COLOR.opacityBlue};
+  color: ${LIGHT_COLOR.main};
   border-radius: 2rem;
   margin-top: 0.8rem;
 `;

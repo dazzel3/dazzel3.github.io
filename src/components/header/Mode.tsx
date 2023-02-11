@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { StaticImage } from 'gatsby-plugin-image';
-import COLOR from 'utils/color';
+import { LIGHT_COLOR } from 'utils/color';
 
 const Mode = () => {
   return (
@@ -25,6 +25,6 @@ const Button = styled.button`
   transition: 0.4s ease;
 
   &:hover {
-    background: ${COLOR.opacityBlue};
+    background: ${LIGHT_COLOR.opacityBlue};
   }
 `;

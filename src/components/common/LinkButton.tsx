@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import { Link } from 'gatsby';
 import styled from '@emotion/styled';
-import COLOR from 'utils/color';
+import { LIGHT_COLOR } from 'utils/color';
 
 interface LinkButtonProps {
   to: string;
@@ -25,9 +25,9 @@ const LinkContainer = styled(({ active, hover, ...props }: LinkButtonProps) => (
 ))`
   font-weight: ${({ active }) => (active ? '600' : '400')};
   transition: 0.4s ease;
-  color: ${({ active }) => (active ? COLOR.main : 'inherit')};
+  color: ${({ active }) => (active ? LIGHT_COLOR.main : 'inherit')};
 
   &:hover {
-    color: ${({ hover }) => (hover ? 'inherit' : COLOR.main)};
+    color: ${({ hover }) => (hover ? 'inherit' : LIGHT_COLOR.main)};
   }
 `;

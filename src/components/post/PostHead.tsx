@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import COLOR from 'utils/color';
+import { LIGHT_COLOR } from 'utils/color';
 
 interface PostHeadProps {
   title: string;
@@ -56,7 +56,7 @@ const Title = styled.h1`
 const Date = styled.h3`
   font-weight: 400;
   font-size: 1.7rem;
-  color: ${COLOR.gray};
+  color: ${LIGHT_COLOR.gray};
 `;
 
 const Wrapper = styled.div`
@@ -70,7 +70,7 @@ const Category = styled.div`
   padding: 1rem 1.6rem;
   font-weight: 500;
   font-size: 1.4rem;
-  background-color: ${COLOR.opacityBlue};
-  color: ${COLOR.main};
+  background-color: ${LIGHT_COLOR.opacityBlue};
+  color: ${LIGHT_COLOR.main};
   border-radius: 2rem;
 `;
