@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import React from 'react';
 import LinkButton from 'components/common/LinkButton';
+import COLOR from 'utils/color';
 
 const Footer = () => {
   return (
@@ -8,13 +9,11 @@ const Footer = () => {
       <Wrapper>
         <Text>
           Copyright ⓒ 2023{' '}
-          <LinkButton to="https://github.com/dazzel3">Sally</LinkButton> All
-          rights reserved. <br />
-          Created by{' '}
-          <LinkButton to="https://github.com/dazzel3">Dayeon Won</LinkButton>.
+          <LinkButton to="https://github.com/dazzel3">Dayeon Won</LinkButton>{' '}
+          All rights reserved. <br />
           Powered By{' '}
           <LinkButton to="https://github.com/dazzel3/tech-blog-ts">
-            @gatsby-ts
+            gatsby-tech-blog
           </LinkButton>
         </Text>
       </Wrapper>
@@ -42,7 +41,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: 1px solid #f6f6f6;
+  border-top: 1px solid ${COLOR.lightGray};
 
   @media screen and (max-width: 767px) and (orientation: portrait) {
     width: 90%;
@@ -50,7 +49,7 @@ const Wrapper = styled.div`
 `;
 
 const Text = styled.h1`
-  color: #757575;
+  color: ${COLOR.gray};
   text-align: center;
   font-size: 1.3rem;
   line-height: 2.2rem;

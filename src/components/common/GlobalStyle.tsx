@@ -1,5 +1,6 @@
 import React from 'react';
 import { Global, css } from '@emotion/react';
+import COLOR from 'utils/color';
 
 const GlobalStyle = () => {
   return <Global styles={defaultStyle} />;
@@ -106,6 +107,7 @@ const defaultStyle = css`
   body {
     font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI',
       sans-serif;
+    background-color: ${COLOR.defaultBg};
   }
   /* HTML5 display-role reset for older browsers */
   article,

@@ -1,5 +1,6 @@
-import styled from '@emotion/styled';
 import React from 'react';
+import styled from '@emotion/styled';
+import COLOR from 'utils/color';
 
 interface PostContentProps {
   html: string;
@@ -61,8 +62,8 @@ const MarkdownRenderer = styled.div`
   blockquote {
     margin: 3rem 0;
     padding: 0.7rem 2.2rem;
-    border-left: 5px solid #2186fa;
-    background-color: #c8e1fe1e;
+    border-left: 5px solid ${COLOR.main};
+    background-color: ${COLOR.lightBlue};
   }
 
   // Adjust List Element Style
@@ -92,14 +93,14 @@ const MarkdownRenderer = styled.div`
 
   // Adjust Horizontal Rule style
   hr {
-    border: 0.4px solid #2186fa2a;
+    border: 0.4px solid ${COLOR.opacityBlue};
     margin: 4rem 0;
   }
 
   // Adjust Link Element Style
   a {
-    color: #2186fa;
-    border-bottom: 0.5px solid #2186fa;
+    color: ${COLOR.main};
+    border-bottom: 0.5px solid ${COLOR.main};
 
     &:hover {
       border-bottom-width: 1px;
@@ -116,7 +117,7 @@ const MarkdownRenderer = styled.div`
   }
 
   aside {
-    border: 1.3px solid #aaaaaa6f;
+    border: 1.3px solid ${COLOR.opacityGray};
     border-radius: 0.4rem;
     padding: 1.5rem 2rem;
     margin-top: 1rem;
@@ -132,9 +133,9 @@ const MarkdownRenderer = styled.div`
   code[class*='language-'] {
     padding: 0.2rem 0.6rem;
     margin: 0 0.2rem;
-    color: #2186fa;
+    color: ${COLOR.main};
     font-size: 1.5rem;
-    background-color: #aaaaaa1e;
+    background-color: ${COLOR.codeBg};
     border-radius: 0.4rem;
     word-break: keep-all;
   }
@@ -142,14 +143,14 @@ const MarkdownRenderer = styled.div`
   pre[class*='language-'] {
     margin: 3.7rem 0;
     padding: 4rem;
-    background-color: #aaaaaa1e;
+    background-color: ${COLOR.codeBg};
 
     @media screen and (max-width: 767px) and (orientation: portrait) {
       padding: 3rem;
     }
 
     code[class*='language-'] {
-      color: #3d3d3d;
+      color: ${COLOR.deepGray};
       background-color: transparent;
     }
 

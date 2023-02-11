@@ -1,5 +1,6 @@
-import styled from '@emotion/styled';
 import React from 'react';
+import styled from '@emotion/styled';
+import COLOR from 'utils/color';
 
 interface PostHeadProps {
   title: string;
@@ -55,7 +56,7 @@ const Title = styled.h1`
 const Date = styled.h3`
   font-weight: 400;
   font-size: 1.7rem;
-  color: #7f7f7f;
+  color: ${COLOR.gray};
 `;
 
 const Wrapper = styled.div`
@@ -69,7 +70,7 @@ const Category = styled.div`
   padding: 1rem 1.6rem;
   font-weight: 500;
   font-size: 1.4rem;
-  background-color: #2186fa1e;
-  color: #2186fa;
+  background-color: ${COLOR.opacityBlue};
+  color: ${COLOR.main};
   border-radius: 2rem;
 `;

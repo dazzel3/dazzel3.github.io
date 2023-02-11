@@ -2,6 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import LinkButton from 'components/common/LinkButton';
 import Mode from './Mode';
+import COLOR from 'utils/color';
 
 const Header = () => {
   return (
@@ -61,7 +62,7 @@ const Logo = styled.div`
   }
 
   & *:hover {
-    color: #2186fa;
+    color: ${COLOR.main};
   }
 
   @media screen and (max-width: 767px) and (orientation: portrait) {
@@ -82,6 +83,6 @@ const ButtonContainer = styled.div`
   }
 
   & *:hover {
-    color: #2186fa;
+    color: ${COLOR.main};
   }
 `;

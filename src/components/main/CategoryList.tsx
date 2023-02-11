@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import React from 'react';
 import LinkButton from 'components/common/LinkButton';
+import COLOR from 'utils/color';
 
 export interface CategoryListProps {
   selectedCategory: string;
@@ -38,16 +39,16 @@ const Container = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  margin: 1.5rem 0;
+  margin-bottom: 1.5rem;
 `;
 
 const Wrapper = styled.div`
   width: fit-content;
   display: flex;
   align-items: center;
-  gap: 1.5rem;
-  font-size: 1.6rem;
-  margin: 2rem 1rem;
+  font-size: 1.7rem;
+  gap: 2rem;
+  margin: 0.5rem 1rem;
   padding: 2rem 1rem;
   white-space: nowrap;
   overflow-x: auto;
@@ -59,5 +60,5 @@ const Wrapper = styled.div`
 `;
 
 const CategoryItem = styled.div`
-  color: #80bbff;
+  color: ${COLOR.gray};
 `;
