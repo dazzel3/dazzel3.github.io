@@ -52,7 +52,7 @@ const IndexPage = ({
             },
           }: PostListItemType,
         ) => {
-          categories.forEach(category => {
+          categories.type.forEach(category => {
             list[category] =
               list[category] === undefined ? 1 : list[category] + 1;
           });
@@ -112,9 +112,12 @@ export const getPostList = graphql`
           }
           frontmatter {
             title
-            date(formatString: "YY.MM.DD")
+            date(formatString: "YYYY.MM.DD")
             summary
-            categories
+            categories {
+              type
+              tags
+            }
             thumbnail {
               childImageSharp {
                 gatsbyImageData(width: 768, height: 400)

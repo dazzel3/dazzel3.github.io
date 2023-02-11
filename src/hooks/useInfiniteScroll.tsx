@@ -23,12 +23,12 @@ const useInfiniteScroll = (
       posts.filter(
         ({
           node: {
-            frontmatter: { categories },
+            frontmatter: {
+              categories: { type },
+            },
           },
         }: PostListItemType) =>
-          selectedCategory !== 'All'
-            ? categories.includes(selectedCategory)
-            : true,
+          selectedCategory !== 'All' ? type.includes(selectedCategory) : true,
       ),
     [selectedCategory],
   );

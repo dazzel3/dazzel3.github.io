@@ -1,7 +1,7 @@
 ---
 date: '2023-01-22'
 title: '프론트엔드 팀프로젝트 회고'
-categories: ['회고', 'React', 'TypeScript']
+categories: { type: ['회고'], tags: ['데브코스', 'React'] }
 summary: '🧑🏻‍💻 2023.1.4 - 1.20까지 약 3주간 진행된 팀프로젝트 with 유리팀'
 thumbnail: './logo-full.png'
 ---

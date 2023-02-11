@@ -4,7 +4,10 @@ export interface PostFrontmatterType {
   title: string;
   summary: string;
   date: string;
-  categories: string[];
+  categories: {
+    type: string[];
+    tags: string[];
+  };
   thumbnail: {
     childImageSharp: {
       gatsbyImageData: IGatsbyImageData;

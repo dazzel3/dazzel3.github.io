@@ -30,7 +30,7 @@ const PostTemplate = ({
         title,
         summary,
         date,
-        categories,
+        categories: { tags },
         thumbnail: { publicURL },
       },
     },
@@ -45,7 +45,7 @@ const PostTemplate = ({
         image={publicURL}
       >
         <Container>
-          <PostHead title={title} date={date} categories={categories} />
+          <PostHead title={title} date={date} tags={tags} />
           <PostContent html={html} />
           <CommentWidget />
         </Container>
@@ -79,7 +79,10 @@ export const queryMarkdownDataBySlug = graphql`
             title
             summary
             date(formatString: "YYYY.MM.DD")
-            categories
+            categories {
+              type
+              tags
+            }
             thumbnail {
               childImageSharp {
                 gatsbyImageData

@@ -4,17 +4,17 @@ import React from 'react';
 interface PostHeadProps {
   title: string;
   date: string;
-  categories: string[];
+  tags: string[];
 }
 
-const PostHead = ({ title, date, categories }: PostHeadProps) => {
+const PostHead = ({ title, date, tags }: PostHeadProps) => {
   return (
     <Container>
       <Title>{title}</Title>
       <Date>{date}</Date>
       <Wrapper>
-        {categories.map(category => (
-          <Category key={category}>{category}</Category>
+        {tags.map(tag => (
+          <Category key={tag}>{tag}</Category>
         ))}
       </Wrapper>
     </Container>

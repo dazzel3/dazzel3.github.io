@@ -20,7 +20,7 @@ const PostItem = ({
       <Summary>{summary}</Summary>
       <Date>{date}</Date>
       <Category>
-        {categories.map(category => (
+        {categories.tags.map(category => (
           <CategoryItem key={category}>{category}</CategoryItem>
         ))}
       </Category>
@@ -52,6 +52,11 @@ const PostItemContent = styled(Link)`
   &:active {
     transition: linear;
     box-shadow: 0 0 1.2px rgba(33, 134, 250, 0.7);
+
+    & > h1 {
+      color: #0568d9;
+      transition: inherit;
+    }
   }
 
   @media screen and (max-width: 767px) and (orientation: portrait) {
