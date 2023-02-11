@@ -6,7 +6,7 @@ const Mode = () => {
   return (
     <Button>
       <StaticImage
-        src="../../images/dark-mode.png"
+        src="../../assets/images/dark-mode.png"
         alt="dark-mode"
         placeholder="blurred"
         style={{ width: '1.7rem', height: '1.7rem' }}
