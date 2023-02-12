@@ -45,6 +45,11 @@ const Template = ({
 
         <meta name="color-scheme" content="dark light"></meta>
 
+        <meta
+          name="google-site-verification"
+          content="P6dJIZhj6XPeaADnK32PCllV74sEhqOMgRMr51rDdFk"
+        />
+
         <html lang="ko" />
       </Helmet>
       <GlobalStyle />
