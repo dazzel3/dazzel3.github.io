@@ -12,7 +12,7 @@ module.exports = {
     title: `Sally-Day Tech Blog`,
     description: `프론트엔드 개발자 Sally의 개발 나날들.`,
     author: `@dayeon`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    siteUrl: `https://dazzel3.github.io/`,
   },
   plugins: [
     {
@@ -44,7 +44,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-canonical-urls',
       options: {
-        siteUrl: 'https://my-website.com/', // 배포 후 변경 예정
+        siteUrl: 'https://dazzel3.github.io/',
         stripQueryString: true,
       },
     },
