@@ -116,6 +116,16 @@ const MarkdownRenderer = styled.div`
     margin-right: 0.2rem;
   }
 
+  details {
+    padding-left: 0.5rem;
+    margin: 0.1rem 0;
+
+    & > div {
+      padding-left: 1.3rem;
+      margin: 1rem 0;
+    }
+  }
+
   aside {
     border: 1.3px solid ${LIGHT_COLOR.opacityGray};
     border-radius: 0.4rem;
