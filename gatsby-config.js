@@ -50,6 +50,7 @@ module.exports = {
     },
     `gatsby-plugin-emotion`,
     'gatsby-plugin-sitemap',
+    `gatsby-plugin-react-helmet`,
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
