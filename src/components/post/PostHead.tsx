@@ -36,8 +36,8 @@ const Container = styled.div`
 
   @media screen and (max-width: 767px) and (orientation: portrait) {
     width: 92%;
-    gap: 2.5rem;
-    padding: 4.5rem 0;
+    gap: 2rem;
+    padding: 4rem 0;
   }
 `;
 
@@ -50,6 +50,8 @@ const Title = styled.h1`
   @media screen and (max-width: 767px) and (orientation: portrait) {
     font-size: 3.4rem;
     text-align: center;
+    font-size: 2.7rem;
+    line-height: 3.6rem;
   }
 `;
 
@@ -57,6 +59,10 @@ const Date = styled.h3`
   font-weight: 400;
   font-size: 1.7rem;
   color: ${LIGHT_COLOR.gray};
+
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    font-size: 1.5rem;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -73,4 +79,9 @@ const Category = styled.div`
   background-color: ${LIGHT_COLOR.opacityBlue};
   color: ${LIGHT_COLOR.main};
   border-radius: 2rem;
+
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    font-size: 1.2rem;
+    padding: 0.8rem 1.4rem;
+  }
 `;

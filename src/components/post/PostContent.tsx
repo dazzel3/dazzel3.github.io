@@ -80,8 +80,8 @@ const MarkdownRenderer = styled.div`
 
   ol,
   ul {
-    margin-left: 2rem;
-    padding: 0.3rem 0;
+    margin-left: 1.7rem;
+    padding: 0.2rem 0;
   }
 
   ol {
