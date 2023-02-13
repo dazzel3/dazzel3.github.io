@@ -3,7 +3,7 @@ date: '2023-01-22'
 title: '프론트엔드 팀프로젝트 회고'
 categories: { type: ['회고'], tags: ['데브코스', 'React'] }
 summary: '🧑🏻‍💻 2023.1.4 - 1.20까지 약 3주간 진행된 팀프로젝트 with 유리팀'
-thumbnail: './logo-full.png'
+thumbnail: './main.png'
 ---
 
 <aside>
@@ -25,6 +25,10 @@ thumbnail: './logo-full.png'
 ### 주제 선정 회의
 
 피그잼을 사용하여 주제에 대한 각자의 의견을 남기고 이를 바탕으로 회의를 진행했다. 이번에 처음으로 피그잼을 사용해보았는데, 실시간으로 의견을 나누는데 있어 효율적이라고 생각한다.
+
+<div style="width: 95%; padding: 1rem 0; margin: 0 auto;" >
+  <img src="./figjam.png" alt="figjam">
+</div>
 
 우리에게 주어진 API는 소셜 네트워크 서비스를 구현과 관련되어 있어, 주제 선정시 약간의 제약이 있었다. 이러한 상황을 최대한 고려해서 주제를 선정하게 되었다.
 
@@ -53,8 +57,8 @@ thumbnail: './logo-full.png'
 
 ### 로고
 
-<div style="width: 70%; padding: 1rem 0; margin: 0 auto;" >
-  <img src="./logo-full.png">
+<div style="width: 70%; padding: 1rem 0 2rem; margin: 0 auto;" >
+  <img src="./logo-full.png" alt="logo">
 </div>
 
 땅을 파면 팔 수록 깊어지는 것처럼 사용자들이 서비스 내에서 지식을 나누면 나눌수록 깊이 있는 학습이 가능하다는 의미를 담았다. 심볼은 학습하는 두더지이며, 메인 컬러는 브라운 계열을 사용했다.
@@ -63,6 +67,10 @@ thumbnail: './logo-full.png'
 
 회의를 하며 만든 와이어프레임을 기반으로 모바일 디자인을 먼저 시작했다. 디자인을 할 때 모바일을 먼저 하고 웹을 하는 것이 더 편하다고 한다. 모바일이 더 화면이 작기 때문에 레이아웃 잡는 것이 까다롭기 때문이라고 생각한다. 그래서 일단 모바일 기준으로 디자인을 완성했다. 퇴근하고 3일은 디자인만 한 것 같다 … 😳  ~~(이 때 너무 개발하고 싶었다. ㅋㅋ)~~ 이후 웹 버전은 로그인/회원가입 부분을 제외하고는 모바일 버전을 거의 유지하는 레이아웃으로 진행했다. 디자인에 많은 열정을 쏟기에는 시간이 너무 부족했다 ….
 
+<div style="width: 95%; padding: 1rem 0 2rem; margin: 0 auto;" >
+  <img src="./figma.png" alt="figma">
+</div>
+
 <br>
 
 ## 💻 개발
@@ -70,6 +78,10 @@ thumbnail: './logo-full.png'
 우리는 주요 기능들을 리스트로 정리하고, 각자 구현하고 싶은 기능을 선택했다. 나는 디자인 작업을 끝내고 나서 부터 기능 개발을 시작했다. 내가 맡은 주요 기능은 **알림 기능과 포스트 에디터 기능**이었다.
 
 ### 기술 스택
+
+<div style="width: 70%; padding: 1rem 0 2rem; margin: 0 auto;" >
+  <img src="./tech.png" alt="tech-stack">
+</div>
 
 타입스크립트 기반 리액트와 styled-components를 사용하였다. 나는 프로젝트에서 리액트나 styled-components는 사용해 본 경험이 있는 반면, 타입스크립트는 없었다. 타입스크립트를 깊게 공부해보지 않아서 사용하는 것에 두려움이 있었다.. 멘토님와 커피챗에서 타입스크립트 도입에 대한 고민을 나눴는데, 멘토님께서 처음 도입해보는 것이니까 타입을 지정해보는 것 만으로도 의미가 있다고 해주셨다. 그래서 우리는 일단 타입을 지정해보는 수준으로 타입스크립트를 사용하게 되었다.
 
@@ -82,6 +94,10 @@ thumbnail: './logo-full.png'
    - 좋아요: `사용자`님이 내 그라운드를 좋아합니다.
    - 댓글: `사용자`님이 내 그라운드를 디깅했습니다.
    - 팔로우: `사용자`님이 나를 팔로우했습니다.
+
+   <div style="width: 95%; padding: 1rem 0 2rem; margin: 0 auto;" >
+    <img src="./notification.png" alt="notification">
+   </div>
 
    여기까지는 문제가 없었는데, 내가 처리하지 않은 부분들이 있었다. 앞으로는 이런 예외 처리에 대해 더 꼼꼼히 처리 해야겠다고 생각했다.
 
@@ -110,6 +126,10 @@ thumbnail: './logo-full.png'
 
    `boolean` 값인 `isSeen`으로 알림을 읽음 여부를 확인할 수 있었는데, API가 알림을 읽었다면 모든 알림의 `isSeen` 값을 변경해주는 역할을 했다. 그래서 `useEffect`로 처음에 화면이 로딩되고 `isSeen`이 하나라도 `false`면 알림이 있다는 것을 아이콘으로 표시해주었다.
 
+   <div style="width: 95%; padding: 1rem 0 2rem; margin: 0 auto;" >
+    <img src="./main.png" alt="main">
+   </div>
+
    <br>
 
 2. **새 포스트 생성 기능**
@@ -127,6 +147,10 @@ thumbnail: './logo-full.png'
 
    즉, 에디터 컴포넌트에서는 상태를 set해주고, 헤더 컴포넌트에서는 커스텀 훅으로부터 상태를 받아와서 서버로 넘겨주는 방식으로 해결할 수 있었다 !!!
 
+   <div style="width: 95%; padding: 1rem 0 2rem; margin: 0 auto;" >
+    <img src="./new-post.png" alt="new-post">
+   </div>
+
    이미지 첨부 기능도 처음 구현해봐서 접근 방식이 떠오르지 않았던 것 같다. 팀원 중에 프로필 이미지 수정 기능을 구현한 팀원이 있어서 도움을 받을 수 있었다.
 
    이미지는 `Blob`이라는 타입을 사용해야 한다는 것을 알게 되었다. 해당 타입을 `src` 속성에 어떻게 넘겨줄까 에 대한 어려움이 있었는데, `URL.createObjectURL(object)`를 사용해서 문제를 해결할 수 있었다.
@@ -135,11 +159,19 @@ thumbnail: './logo-full.png'
 
    이런 내용을 바탕으로 아래와 같이 기능을 구현했다.
 
+   <div style="width: 95%; padding: 1rem 0 2rem; margin: 0 auto;" >
+    <img src="./create-post.png" alt="create-post">
+   </div>
+
    <br>
 
 3. **내가 작성한 포스트 수정 기능**
 
    `useEffect`에서 해당 포스트 정보를 불러와 각 `title, body, image` 상태에 set해주었다. 그리고 편집한 내용을 다시 `PUT`해주는 형식으로 구현했다.
+
+   <div style="width: 95%; padding: 1rem 0 2rem; margin: 0 auto;" >
+    <img src="./edit-post.png" alt="edit-post">
+   </div>
 
 <br>
 
