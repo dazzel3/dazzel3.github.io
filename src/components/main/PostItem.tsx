@@ -35,8 +35,8 @@ const PostItemContent = styled(Link)`
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  padding: 2.6rem 3rem;
+  gap: 1.2rem;
+  padding: 2.3rem 2.8rem;
   border-radius: 1.5rem;
   margin: 0.5rem 0;
   transition: 0.3s ease-in-out;
@@ -61,6 +61,9 @@ const PostItemContent = styled(Link)`
   }
 
   @media screen and (max-width: 767px) and (orientation: portrait) {
+    padding: 1.7rem 2.5rem;
+    gap: 0.9rem;
+
     &:hover {
       box-shadow: none;
     }
@@ -79,6 +82,12 @@ const Title = styled.h1`
   font-weight: 700;
   line-height: 3.4rem;
   margin-top: 0.2rem;
+
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    font-size: 2rem;
+    line-height: 2.8rem;
+    margin: 0;
+  }
 `;
 
 const Summary = styled.div`
@@ -93,18 +102,31 @@ const Summary = styled.div`
   font-size: 1.6rem;
   line-height: 2.4rem;
   opacity: 0.8;
+
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
 `;
 
 const Date = styled.div`
   font-size: 1.5rem;
   font-weight: 400;
   color: ${LIGHT_COLOR.gray};
+
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    font-size: 1.3rem;
+  }
 `;
 
 const Category = styled.div`
   display: flex;
   align-items: center;
   gap: 1.2rem;
+
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    gap: 1rem;
+  }
 `;
 
 const CategoryItem = styled.div`
@@ -115,4 +137,8 @@ const CategoryItem = styled.div`
   color: ${LIGHT_COLOR.main};
   border-radius: 2rem;
   margin-top: 0.8rem;
+
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    font-size: 1.2rem;
+  }
 `;

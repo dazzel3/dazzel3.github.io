@@ -39,7 +39,12 @@ const Container = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -47,7 +52,7 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   font-size: 1.7rem;
-  gap: 2rem;
+  gap: 2.5rem;
   margin: 0.5rem 1rem;
   padding: 2rem 1rem;
   white-space: nowrap;
