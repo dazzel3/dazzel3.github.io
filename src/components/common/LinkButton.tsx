@@ -28,7 +28,8 @@ const LinkContainer = styled(({ active, hover, ...props }: LinkButtonProps) => (
   color: ${({ active }) => (active ? LIGHT_COLOR.main : 'inherit')};
 
   &:hover {
-    color: ${({ hover }) => (hover ? LIGHT_COLOR.main : 'inherit')};
+    color: ${({ hover, active }) =>
+      hover || active ? LIGHT_COLOR.main : 'inherit'};
   }
 
   &:active {
