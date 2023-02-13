@@ -39,11 +39,11 @@ const Template = ({
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={image} />
+        {/* <meta name="twitter:image" content={image} /> */}
         <meta name="twitter:site" content="@dayeon" />
         <meta name="twitter:creator" content="@dayeon" />
 
-        <meta name="color-scheme" content="dark light"></meta>
+        {/* <meta name="color-scheme" content="dark light"></meta> */}
 
         <meta
           name="google-site-verification"
@@ -70,6 +70,6 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 400px;
+  min-width: 300px;
   height: 100%;
 `;
