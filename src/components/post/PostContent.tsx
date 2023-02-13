@@ -17,18 +17,19 @@ const MarkdownRenderer = styled.div`
   flex-direction: column;
   width: 100%;
   margin: 0 auto;
-
-  // Markdown Style
   line-height: 1.8;
   font-size: 1.7rem;
   font-weight: 400;
 
-  // Apply Padding Attribute to All Elements
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    line-height: 1.7;
+    font-size: 1.6rem;
+  }
+
   p {
     padding: 0.3rem 0;
   }
 
-  // Adjust Heading Element Style
   h1,
   h2,
   h3 {
@@ -48,17 +49,28 @@ const MarkdownRenderer = styled.div`
 
   h1 {
     font-size: 3.2rem;
+
+    @media screen and (max-width: 767px) and (orientation: portrait) {
+      font-size: 2.4rem;
+    }
   }
 
   h2 {
     font-size: 2.8rem;
+
+    @media screen and (max-width: 767px) and (orientation: portrait) {
+      font-size: 2.2rem;
+    }
   }
 
   h3 {
     font-size: 2.4rem;
+
+    @media screen and (max-width: 767px) and (orientation: portrait) {
+      font-size: 1.9rem;
+    }
   }
 
-  // Adjust Quotation Element Style
   blockquote {
     margin: 3rem 0;
     padding: 0.7rem 2.2rem;
@@ -66,7 +78,6 @@ const MarkdownRenderer = styled.div`
     background-color: ${LIGHT_COLOR.lightBlue};
   }
 
-  // Adjust List Element Style
   ol,
   ul {
     margin-left: 2rem;
@@ -91,13 +102,15 @@ const MarkdownRenderer = styled.div`
     }
   }
 
-  // Adjust Horizontal Rule style
   hr {
     border: 0.4px solid ${LIGHT_COLOR.opacityBlue};
     margin: 4rem 0;
+
+    @media screen and (max-width: 767px) and (orientation: portrait) {
+      margin: 2.5rem 0;
+    }
   }
 
-  // Adjust Link Element Style
   a {
     color: ${LIGHT_COLOR.main};
     border-bottom: 0.5px solid ${LIGHT_COLOR.main};
@@ -131,9 +144,13 @@ const MarkdownRenderer = styled.div`
     border-radius: 0.4rem;
     padding: 1.5rem 2rem;
     margin-top: 1rem;
+
+    @media screen and (max-width: 767px) and (orientation: portrait) {
+      padding: 1.2rem 1.8rem;
+      margin-top: 0.5rem;
+    }
   }
 
-  // Adjust Code Style
   code[class*='language-'],
   pre[class*='language-'] {
     font-family: 'NotoSansMono';
@@ -142,21 +159,26 @@ const MarkdownRenderer = styled.div`
 
   code[class*='language-'] {
     padding: 0.2rem 0.6rem;
-    margin: 0 0.2rem;
+    margin: 0 0.1rem;
     color: ${LIGHT_COLOR.main};
-    font-size: 1.5rem;
     background-color: ${LIGHT_COLOR.codeBg};
+    font-size: 1.5rem;
     border-radius: 0.4rem;
-    word-break: keep-all;
+
+    @media screen and (max-width: 767px) and (orientation: portrait) {
+      font-size: 1.4rem;
+      padding: 0.1rem 0.5rem;
+    }
   }
 
   pre[class*='language-'] {
-    margin: 3.7rem 0;
+    margin: 3rem 0;
     padding: 4rem;
     background-color: ${LIGHT_COLOR.codeBg};
 
     @media screen and (max-width: 767px) and (orientation: portrait) {
-      padding: 3rem;
+      padding: 2rem;
+      margin: 2rem 0;
     }
 
     code[class*='language-'] {
