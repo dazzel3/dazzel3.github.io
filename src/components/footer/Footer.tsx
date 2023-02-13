@@ -31,7 +31,7 @@ const Container = styled.div`
   align-items: center;
 
   @media screen and (max-width: 767px) and (orientation: portrait) {
-    height: 9vh;
+    height: 10vh;
   }
 `;
 
@@ -55,6 +55,8 @@ const Text = styled.h1`
   line-height: 2.2rem;
 
   @media screen and (max-width: 767px) and (orientation: portrait) {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    line-height: 1.6rem;
+    opacity: 0.8;%
   }
 `;
