@@ -1,8 +1,8 @@
 ---
 date: '2023-02-08'
 title: 'Describing the UI (1)'
-categories: { type: ['스터디'], tags: ['React Docs'] }
-summary: '리액트 컴포넌트를 어떻게 만들고 커스텀하고 조건에 따라 보여줄지를 배운다.'
+categories: { type: ['React'], tags: ['React Docs'] }
+summary: 'Your First Component, Importing and Exporting Components, Writing Markup with JSX, JavaScript in JSX with Curly Braces'
 thumbnail: './react.png'
 ---
 
@@ -126,7 +126,10 @@ thumbnail: './react.png'
 
 ### References
 
-- [React Docs Beta](https://beta.reactjs.org/)
+- [react/your-first-component](https://react.dev/learn/your-first-component)
+- [react/importing-and-exporting-components](https://react.dev/learn/importing-and-exporting-components)
+- [react/writing-markup-with-jsx](https://react.dev/learn/writing-markup-with-jsx)
+- [react/javascript-in-jsx-with-curly-braces](https://react.dev/learn/javascript-in-jsx-with-curly-braces)
 - [Babel · The compiler for next generation JavaScript](https://babeljs.io/repl/#?browsers=defaults%2C%20not%20ie%2011%2C%20not%20ie_mob%2011&build=&builtIns=false&corejs=3.21&spec=false&loose=false&code_lz=GYVwdgxgLglg9mABACwKYBt1wBQEpEDeAUIogE6pQhlLYmICQAPAHz2mlMAmMAbohHQBDAM4iAckIC2qALwAiAOZw4XeYgDWqAJ4KYalgAchFMFCYB6HrzYdEl24lwBuIgF8iQA&debug=false&forceAllTransforms=false&shippedProposals=false&circleciRepo=&evaluate=false&fileSize=false&timeTravel=false&sourceType=module&lineWrap=true&presets=react&prettier=false&targets=&version=7.20.15&externalPlugins=&assumptions=%7B%7D)
 
 <br>

@@ -1,8 +1,8 @@
 ---
 date: '2023-02-10'
 title: 'Describing the UI (2)'
-categories: { type: ['스터디'], tags: ['React Docs'] }
-summary: '리액트 컴포넌트를 어떻게 만들고 커스텀하고 조건에 따라 보여줄지를 배운다.'
+categories: { type: ['React'], tags: ['React Docs'] }
+summary: 'Passing Props to Component, Conditional Rendering, Rendering Lists, Keeping Components Pure'
 thumbnail: './react.png'
 ---
 
@@ -205,6 +205,9 @@ export default function TeaSet() {
 
 ### References
 
-- [React Docs Beta](https://beta.reactjs.org/)
+- [react/passing-props-to-a-component](https://react.dev/learn/passing-props-to-a-component)
+- [react/conditional-rendering](https://react.dev/learn/conditional-rendering)
+- [react/rendering-lists](https://react.dev/learn/rendering-lists)
+- [react/keeping-components-pure](https://react.dev/learn/keeping-components-pure)
 
 <br>
