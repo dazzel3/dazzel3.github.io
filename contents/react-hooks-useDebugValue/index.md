@@ -1,5 +1,5 @@
 ---
-date: '2023-02-08'
+date: '2023-05-02'
 title: 'useDebugValue란?'
 categories: { type: ['React'], tags: ['React Docs'] }
 summary: 'React Hook 중 useDebugValue에 대해 알아보자.'
