@@ -1,7 +1,7 @@
 ---
 date: '2023-02-10'
 title: 'Describing the UI (2)'
-categories: { type: ['스터디'], tags: ['React Docs Beta'] }
+categories: { type: ['스터디'], tags: ['React Docs'] }
 summary: '리액트 컴포넌트를 어떻게 만들고 커스텀하고 조건에 따라 보여줄지를 배운다.'
 thumbnail: './react.png'
 ---
