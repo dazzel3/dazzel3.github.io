@@ -120,9 +120,8 @@ const Date = styled.div`
 `;
 
 const Category = styled.div`
-  display: flex;
-  align-items: center;
   gap: 1.2rem;
+  width: 100%;
 
   @media screen and (max-width: 767px) and (orientation: portrait) {
     gap: 1rem;
@@ -130,15 +129,21 @@ const Category = styled.div`
 `;
 
 const CategoryItem = styled.div`
+  float: left;
   padding: 0.8rem 1.4rem;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
   font-weight: 500;
   font-size: 1.3rem;
   background-color: ${LIGHT_COLOR.opacityBlue};
   color: ${LIGHT_COLOR.main};
   border-radius: 2rem;
   margin-top: 0.8rem;
+  word-break: keep-all;
 
   @media screen and (max-width: 767px) and (orientation: portrait) {
     font-size: 1.2rem;
+    margin-right: 0.8rem;
+    margin-bottom: 0.3rem;
   }
 `;

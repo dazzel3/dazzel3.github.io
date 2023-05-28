@@ -65,17 +65,16 @@ const Date = styled.h3`
   }
 `;
 
-const Wrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.3rem;
-`;
+const Wrapper = styled.div``;
 
 const Category = styled.div`
+  float: left;
   padding: 1rem 1.6rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
   font-weight: 500;
   font-size: 1.4rem;
+  word-break: keep-all;
   background-color: ${LIGHT_COLOR.opacityBlue};
   color: ${LIGHT_COLOR.main};
   border-radius: 2rem;
@@ -83,5 +82,7 @@ const Category = styled.div`
   @media screen and (max-width: 767px) and (orientation: portrait) {
     font-size: 1.2rem;
     padding: 0.8rem 1.4rem;
+    margin-right: 0.8rem;
+    margin-bottom: 0.8rem;
   }
 `;
