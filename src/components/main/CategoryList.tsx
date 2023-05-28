@@ -24,7 +24,7 @@ const CategoryList = ({
               active={name === selectedCategory}
               key={name}
             >
-              {name}
+              {name} ({count})
             </LinkButton>
           </CategoryItem>
         ))}
