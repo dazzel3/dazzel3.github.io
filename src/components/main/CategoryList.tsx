@@ -18,11 +18,10 @@ const CategoryList = ({
     <Container>
       <Wrapper>
         {Object.entries(categoryList).map(([name, count]) => (
-          <CategoryItem>
+          <CategoryItem key={name}>
             <LinkButton
               to={`/?category=${encodeURI(name)}`}
               active={name === selectedCategory}
-              key={name}
             >
               {name} ({count})
             </LinkButton>
