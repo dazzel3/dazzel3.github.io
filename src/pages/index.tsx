@@ -7,6 +7,7 @@ import { PostListItemType } from 'types/postItem';
 import queryString, { ParsedQuery } from 'query-string';
 import { CategoryListProps } from '../components/main/CategoryList';
 import styled from '@emotion/styled';
+import { DarkModeProvider } from 'context/DarkModeContext';
 
 interface IndexPageProps {
   location: {
@@ -67,15 +68,17 @@ const IndexPage = ({
   );
 
   return (
-    <Template title={title} description={description} url={siteUrl}>
-      <Container>
-        <CategoryList
-          selectedCategory={selectedCategory}
-          categoryList={categoryList}
-        />
-        <PostList selectedCategory={selectedCategory} posts={edges} />
-      </Container>
-    </Template>
+    <DarkModeProvider>
+      <Template title={title} description={description} url={siteUrl}>
+        <Container>
+          <CategoryList
+            selectedCategory={selectedCategory}
+            categoryList={categoryList}
+          />
+          <PostList selectedCategory={selectedCategory} posts={edges} />
+        </Container>
+      </Template>
+    </DarkModeProvider>
   );
 };
 

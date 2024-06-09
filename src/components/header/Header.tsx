@@ -11,7 +11,6 @@ const Header = () => {
         <Logo>
           <LinkButton to="/">Sally-Day</LinkButton>
         </Logo>
-
         <ButtonContainer>
           <LinkButton to="/">Blog</LinkButton>
           <LinkButton to="/about">About</LinkButton>
