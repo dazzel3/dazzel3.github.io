@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
 import React from 'react';
 import LinkButton from 'components/common/LinkButton';
-import { LIGHT_COLOR } from 'utils/color';
 
 export interface CategoryListProps {
   selectedCategory: string;
@@ -64,5 +63,5 @@ const Wrapper = styled.div`
 `;
 
 const CategoryItem = styled.div`
-  color: ${LIGHT_COLOR.gray};
+  color: ${({ theme }) => theme.colors.gray};
 `;

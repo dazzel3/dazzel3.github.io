@@ -2,7 +2,6 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { PostFrontmatterType } from 'types/postItem';
 import { Link } from 'gatsby';
-import { LIGHT_COLOR } from 'utils/color';
 
 interface PostItemProps extends PostFrontmatterType {
   link: string;
@@ -45,7 +44,7 @@ const PostItemContent = styled(Link)`
     box-shadow: 0px 0px 20px rgba(33, 134, 250, 0.08);
 
     & > h1 {
-      color: ${LIGHT_COLOR.main};
+      color: ${({ theme }) => theme.colors.main};
       transition: inherit;
     }
   }
@@ -55,7 +54,7 @@ const PostItemContent = styled(Link)`
     box-shadow: 0 0 1.2px rgba(33, 134, 250, 0.7);
 
     & > h1 {
-      color: ${LIGHT_COLOR.deepBlue};
+      color: ${({ theme }) => theme.colors.deepBlue};
       transition: inherit;
     }
   }
@@ -112,7 +111,7 @@ const Summary = styled.div`
 const Date = styled.div`
   font-size: 1.5rem;
   font-weight: 400;
-  color: ${LIGHT_COLOR.gray};
+  color: ${({ theme }) => theme.colors.gray};
 
   @media screen and (max-width: 767px) and (orientation: portrait) {
     font-size: 1.3rem;
@@ -135,8 +134,8 @@ const CategoryItem = styled.div`
   margin-bottom: 0.5rem;
   font-weight: 500;
   font-size: 1.3rem;
-  background-color: ${LIGHT_COLOR.opacityBlue};
-  color: ${LIGHT_COLOR.main};
+  background-color: ${({ theme }) => theme.colors.opacityBlue};
+  color: ${({ theme }) => theme.colors.main};
   border-radius: 2rem;
   margin-top: 0.8rem;
   word-break: keep-all;

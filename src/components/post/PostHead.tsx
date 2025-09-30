@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { LIGHT_COLOR } from 'utils/color';
 
 interface PostHeadProps {
   title: string;
@@ -58,7 +57,7 @@ const Title = styled.h1`
 const Date = styled.h3`
   font-weight: 400;
   font-size: 1.7rem;
-  color: ${LIGHT_COLOR.gray};
+  color: ${({ theme }) => theme.colors.gray};
 
   @media screen and (max-width: 767px) and (orientation: portrait) {
     font-size: 1.5rem;
@@ -75,8 +74,8 @@ const Category = styled.div`
   font-weight: 500;
   font-size: 1.4rem;
   word-break: keep-all;
-  background-color: ${LIGHT_COLOR.opacityBlue};
-  color: ${LIGHT_COLOR.main};
+  background-color: ${({ theme }) => theme.colors.opacityBlue};
+  color: ${({ theme }) => theme.colors.main};
   border-radius: 2rem;
 
   @media screen and (max-width: 767px) and (orientation: portrait) {

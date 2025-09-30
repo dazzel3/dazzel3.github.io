@@ -2,7 +2,6 @@ import React from 'react';
 import styled from '@emotion/styled';
 import LinkButton from 'components/common/LinkButton';
 import Mode from './Mode';
-import { LIGHT_COLOR } from 'utils/color';
 
 const Header = () => {
   return (
@@ -12,8 +11,6 @@ const Header = () => {
           <LinkButton to="/">Sally-Day</LinkButton>
         </Logo>
         <ButtonContainer>
-          <LinkButton to="/">Blog</LinkButton>
-          <LinkButton to="/about">About</LinkButton>
           <Mode />
         </ButtonContainer>
       </Wrapper>
@@ -56,12 +53,8 @@ const Logo = styled.div`
   padding: -0.2rem 0.1rem;
   transition: 0.2s ease-in-out;
 
-  & * {
-    transition: 0.2s ease;
-  }
-
   & *:hover {
-    color: ${LIGHT_COLOR.main};
+    color: ${({ theme }) => theme.colors.main};
   }
 
   @media screen and (max-width: 767px) and (orientation: portrait) {
@@ -77,11 +70,7 @@ const ButtonContainer = styled.div`
   font-size: 1.5rem;
   font-weight: 500;
 
-  & * {
-    transition: 0.2s ease;
-  }
-
   & *:hover {
-    color: ${LIGHT_COLOR.main};
+    color: ${({ theme }) => theme.colors.main};
   }
 `;

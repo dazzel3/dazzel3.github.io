@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
 import React from 'react';
 import LinkButton from 'components/common/LinkButton';
-import { LIGHT_COLOR } from 'utils/color';
 
 const Footer = () => {
   return (
@@ -41,7 +40,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: 1px solid ${LIGHT_COLOR.lightGray};
+  border-top: 1px solid ${({ theme }) => theme.colors.lightGray};
 
   @media screen and (max-width: 767px) and (orientation: portrait) {
     width: 90%;
@@ -49,7 +48,7 @@ const Wrapper = styled.div`
 `;
 
 const Text = styled.h1`
-  color: ${LIGHT_COLOR.gray};
+  color: ${({ theme }) => theme.colors.gray};
   text-align: center;
   font-size: 1.3rem;
   line-height: 2.2rem;
@@ -57,6 +56,6 @@ const Text = styled.h1`
   @media screen and (max-width: 767px) and (orientation: portrait) {
     font-size: 1rem;
     line-height: 1.6rem;
-    opacity: 0.8;%
+    opacity: 0.8;
   }
 `;

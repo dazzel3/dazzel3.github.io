@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { LIGHT_COLOR } from 'utils/color';
 
 interface PostContentProps {
   html: string;
@@ -74,8 +73,8 @@ const MarkdownRenderer = styled.div`
   blockquote {
     margin: 3rem 0;
     padding: 0.7rem 2.2rem;
-    border-left: 5px solid ${LIGHT_COLOR.main};
-    background-color: ${LIGHT_COLOR.lightBlue};
+    border-left: 5px solid ${({ theme }) => theme.colors.main};
+    background-color: ${({ theme }) => theme.colors.lightBlue};
   }
 
   ol,
@@ -103,7 +102,7 @@ const MarkdownRenderer = styled.div`
   }
 
   hr {
-    border: 0.4px solid ${LIGHT_COLOR.opacityBlue};
+    border: 0.4px solid ${({ theme }) => theme.colors.opacityBlue};
     margin: 4rem 0;
 
     @media screen and (max-width: 767px) and (orientation: portrait) {
@@ -112,8 +111,8 @@ const MarkdownRenderer = styled.div`
   }
 
   a {
-    color: ${LIGHT_COLOR.main};
-    border-bottom: 0.5px solid ${LIGHT_COLOR.main};
+    color: ${({ theme }) => theme.colors.main};
+    border-bottom: 0.5px solid ${({ theme }) => theme.colors.main};
 
     &:hover {
       border-bottom-width: 1px;
@@ -140,7 +139,7 @@ const MarkdownRenderer = styled.div`
   }
 
   aside {
-    border: 1.3px solid ${LIGHT_COLOR.opacityGray};
+    border: 1.3px solid ${({ theme }) => theme.colors.opacityGray};
     border-radius: 0.4rem;
     padding: 1.5rem 2rem;
     margin-top: 1rem;
@@ -160,8 +159,8 @@ const MarkdownRenderer = styled.div`
   code[class*='language-'] {
     padding: 0.2rem 0.6rem;
     margin: 0 0.1rem;
-    color: ${LIGHT_COLOR.main};
-    background-color: ${LIGHT_COLOR.codeBg};
+    color: ${({ theme }) => theme.colors.main};
+    background-color: ${({ theme }) => theme.colors.codeBg};
     font-size: 1.5rem;
     border-radius: 0.4rem;
 
@@ -174,7 +173,7 @@ const MarkdownRenderer = styled.div`
   pre[class*='language-'] {
     margin: 3rem 0;
     padding: 4rem;
-    background-color: ${LIGHT_COLOR.codeBg};
+    background-color: ${({ theme }) => theme.colors.codeBg};
 
     @media screen and (max-width: 767px) and (orientation: portrait) {
       padding: 2rem;
@@ -182,7 +181,7 @@ const MarkdownRenderer = styled.div`
     }
 
     code[class*='language-'] {
-      color: ${LIGHT_COLOR.deepGray};
+      color: ${({ theme }) => theme.colors.deepGray};
       background-color: transparent;
     }
 
