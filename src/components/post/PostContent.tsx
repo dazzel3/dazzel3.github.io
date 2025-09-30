@@ -153,7 +153,7 @@ const MarkdownRenderer = styled.div`
   code[class*='language-'],
   pre[class*='language-'] {
     font-family: 'NotoSansMono';
-    tab-size: 2;
+    tab-size: 2; 
   }
 
   code[class*='language-'] {
@@ -171,13 +171,13 @@ const MarkdownRenderer = styled.div`
   }
 
   pre[class*='language-'] {
-    margin: 3rem 0;
-    padding: 4rem;
+    margin: 2rem 0;
+    padding: 2.5rem;
     background-color: ${({ theme }) => theme.colors.codeBg};
 
     @media screen and (max-width: 767px) and (orientation: portrait) {
-      padding: 2rem;
-      margin: 2rem 0;
+      padding: 1.8rem;
+      margin: 1.5rem 0;
     }
 
     code[class*='language-'] {
