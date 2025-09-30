@@ -1,7 +1,7 @@
 ---
 date: '2025-09-12'
 title: 'React.memo로 성능 최적화하기'
-categories: { type: ['React'], tags: ['React', 'Security'] }
+categories: { type: ['React'], tags: ['React'] }
 summary: 'React.memo로 불필요한 리렌더링을 줄이는 방법을 알아보자.'
 thumbnail: './react.png'
 ---
